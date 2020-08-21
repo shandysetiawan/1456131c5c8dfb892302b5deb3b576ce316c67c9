@@ -11,6 +11,7 @@ flex-direction: column;
 align-items: center;
 margin-right: 8px; 
 padding: 10px;
+font-size: 12px;
 color: ${props => props.disabled && "#e2e4e4"};
 
 :focus {

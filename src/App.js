@@ -32,15 +32,15 @@ function App() {
       <Header>
         <div style={{ display: 'flex', alignItems: 'center' }}>
           <ArrowBackIcon />
-          <div style={{ marginLeft: '12px' }}>
-            <div>Alamat Pengantaran</div>
-            <div onClick={() => setShowModal(true)} style={{ display: "flex", alignItems: "center" }}>Tokopedia Tower <KeyboardArrowDownIcon /></div>
+          <div style={{ marginLeft: '12px', marginTop: "8px" }}>
+            <div style={{ fontSize: "8px", color: "#6e7679" }}>ALAMAT PENGANTARAN</div>
+            <div onClick={() => setShowModal(true)} style={{ display: "flex", alignItems: "center", fontWeight: "bold" }}>Tokopedia Tower <KeyboardArrowDownIcon /></div>
           </div>
         </div>
         <DateWrapper>
           {dates.map(date => <Date tabIndex={date.active ? 0 : -1} disabled={!date.active}>
-            <span>{date.day}</span>
-            <span>{date.date}</span>
+            <span style={{ color: "#6e7679" }}>{date.day}</span>
+            <span style={{ fontWeight: "bold" }}>{date.date}</span>
           </Date>)}
         </DateWrapper>
       </Header>
@@ -54,7 +54,7 @@ function App() {
           <Image src={menu.image} />
           <Container>
             <div style={{ display: "flex" }}>
-              <div style={{ display: "flex", alignItems: "center" }}>{menu.rating}</div>
+              <div style={{ display: "flex", alignItems: "center", marginRight: "4px" }}>{menu.rating}</div>
               <div style={{ display: "flex" }}>
                 <StarIcon />
                 <StarIcon />
