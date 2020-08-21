@@ -17,7 +17,7 @@ import {
   AddCartButton,
   Date
 } from './components';
-import { ArrowBackIcon, KeyboardArrowDownIcon, StarIcon } from './components/icon';
+import { ArrowBackIcon, KeyboardArrowDownIcon, StarIcon, PlaceIcon } from './components/icon';
 import menus from './data/menu';
 import locations from './data/location.json';
 import dates from './data/date.json';
@@ -86,9 +86,12 @@ function App() {
           {searchedText.length >= 3 &&
             <ListContainer>
               {locations.map(location =>
-                <ListItem title={location.name}>
-                  <TruncatText>{location.address}</TruncatText>
-                </ListItem>
+                <div style={{ display: "flex", alignItems: "center" }}>
+                  <PlaceIcon />
+                  <ListItem title={location.name}>
+                    <TruncatText>{location.address}</TruncatText>
+                  </ListItem>
+                </div>
               )}
             </ListContainer>
           }
