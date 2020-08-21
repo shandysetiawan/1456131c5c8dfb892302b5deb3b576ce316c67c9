@@ -12,15 +12,25 @@ justify-content: space-between;
 color:#e2e4e4;
 `;
 
+const TextContainer = styled.div`
+display:flex;
+flex-direction:column;
+`;
+
+const IconContainer = styled.div`
+display:flex;
+fill: #fff;
+`;
+
 export const AddCartButton = (props) => (
 	<Container fullWidth>
-		<p>
-			<span >1 Item(s) | Rp 130.000</span>
-			<span>Termasuk ongkos kirim</span>
-		</p>
-		<div>
+		<TextContainer>
+			<span style={{ fontWeight: "bold" }}>1 Item(s) | Rp 130.000</span>
+			<span style={{ fontSize: 12 }}>Termasuk ongkos kirim</span>
+		</TextContainer>
+		<IconContainer>
 			<ShopCartIcon />
 			<ArrowCartIcon />
-		</div>
+		</IconContainer>
 	</Container >
 );
