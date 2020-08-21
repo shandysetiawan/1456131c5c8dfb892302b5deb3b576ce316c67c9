@@ -5,3 +5,4 @@ export * from './container';
 export * from './sticky-bottom-container';
 export * from './header';
 export * from './icon';
+export * from './modal';

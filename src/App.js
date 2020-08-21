@@ -1,20 +1,19 @@
 import React, { useState } from 'react';
-import { ThemeProvider } from 'styled-components';
-import { Card, Image, Button, Container, StickyBottomContainer, Header } from './components';
-import { ArrowBack, KeyboardArrowDown } from './components/icon';
+import { Card, Image, Button, Container, StickyBottomContainer, Header, Modal } from './components';
+import { ArrowBackIcon, KeyboardArrowDownIcon } from './components/icon';
 import menus from './data/menu';
 
 function App() {
   const [showSticky, setShowSticky] = useState(false);
 
   return (
-    <ThemeProvider theme={{}}>
+    <>
       <Container main>
         <Header>
-          <ArrowBack />
+          <ArrowBackIcon />
           <div>
             <div>Alamat Pengantaran</div>
-            <div style={{ display: "flex", alignItems: "center" }}>Tokopedia Tower <KeyboardArrowDown /></div>
+            <div style={{ display: "flex", alignItems: "center" }}>Tokopedia Tower <KeyboardArrowDownIcon /></div>
           </div>
         </Header>
         {menus.map(menu => <Card>
@@ -36,7 +35,11 @@ function App() {
         <Button fullWidth>Sticky Button</Button>
       </StickyBottomContainer>
 
-    </ThemeProvider >
+      <Modal>
+
+      </Modal>
+
+    </>
   );
 }
 
