@@ -23,10 +23,20 @@ border-top-left-radius: 8px;
 border-top-right-radius: 8px;
 `;
 
+const ModalChildren = styled.div`
+margin-top: 32px;
+padding: 0 12px;
+`;
+
 export const Modal = (props) =>
-	<ModalContainer>
-		<ModalContent>
-			<CloseIcon floatRight />
-			{props.children}
-		</ModalContent>
-	</ModalContainer>;
+	(
+		props.show &&
+		<ModalContainer >
+			<ModalContent>
+				<CloseIcon floatRight onClick={() => props.setShow(false)} />
+				<ModalChildren>
+					{props.children}
+				</ModalChildren>
+			</ModalContent>
+		</ModalContainer>
+	);

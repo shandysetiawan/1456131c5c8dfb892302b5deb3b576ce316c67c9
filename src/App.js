@@ -5,6 +5,8 @@ import menus from './data/menu';
 
 function App() {
   const [showSticky, setShowSticky] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+  const [searchedText, setSearchedText] = useState('');
 
   return (
     <>
@@ -13,7 +15,7 @@ function App() {
           <ArrowBackIcon />
           <div>
             <div>Alamat Pengantaran</div>
-            <div style={{ display: "flex", alignItems: "center" }}>Tokopedia Tower <KeyboardArrowDownIcon /></div>
+            <div onClick={() => setShowModal(true)} style={{ display: "flex", alignItems: "center" }}>Tokopedia Tower <KeyboardArrowDownIcon /></div>
           </div>
         </Header>
         {menus.map(menu => <Card>
@@ -35,8 +37,20 @@ function App() {
         <Button fullWidth>Sticky Button</Button>
       </StickyBottomContainer>
 
-      <Modal>
+      <Modal show={showModal} setShow={setShowModal}>
+        <div>
+          Cek makanan yang tersedia di lokasi kamu!
+          <input type="text" onChange={e => setSearchedText(e.target.value)} />
 
+          {searchedText.length > 3 &&
+            <ul>
+              <li>list 1</li>
+              <li>list 2</li>
+              <li>list 3</li>
+            </ul>
+          }
+
+        </div>
       </Modal>
 
     </>
