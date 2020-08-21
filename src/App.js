@@ -1,6 +1,6 @@
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
-import { Card, Image } from './components';
+import { Card, Image, Button } from './components';
 import menus from './data/menu';
 
 function App() {
@@ -12,6 +12,7 @@ function App() {
         <h2>{menu.title}</h2>
         <div>{menu.cook_by} &middot; {menu.category}</div>
         <div>{menu.price}</div>
+        <Button>ADD</Button>
       </Card>)
       }
     </ThemeProvider >
