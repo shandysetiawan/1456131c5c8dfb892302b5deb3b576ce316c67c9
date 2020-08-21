@@ -1,0 +1,72 @@
+[
+	{
+		"date": 10,
+		"day": "SEN",
+		"active": true
+	},
+	{
+		"date": 11,
+		"day": "SEL",
+		"active": true
+	},
+	{
+		"date": 12,
+		"day": "RAB",
+		"active": true
+	},
+	{
+		"date": 13,
+		"day": "KAM",
+		"active": true
+	},
+	{
+		"date": 14,
+		"day": "JUM",
+		"active": true
+	},
+	{
+		"date": 15,
+		"day": "SAB",
+		"active": false
+	},
+	{
+		"date": 16,
+		"day": "MIN",
+		"active": false
+	},
+	{
+		"date": 17,
+		"day": "SEN",
+		"active": true
+	},
+	{
+		"date": 18,
+		"day": "SEL",
+		"active": true
+	},
+	{
+		"date": 19,
+		"day": "RAB",
+		"active": true
+	},
+	{
+		"date": 20,
+		"day": "KAM",
+		"active": true
+	},
+	{
+		"date": 21,
+		"day": "JUM",
+		"active": true
+	},
+	{
+		"date": 22,
+		"day": "SAB",
+		"active": true
+	},
+	{
+		"date": 23,
+		"day": "MIN",
+		"active": true
+	}
+]

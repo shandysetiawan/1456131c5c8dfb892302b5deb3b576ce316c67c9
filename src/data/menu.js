@@ -1,10 +1,12 @@
+
+
 export default [
     {
         "id": 1,
         "title": "Roasted Chicken with Scrambled Egg",
         "cook_by": "Kulina",
         "category": "Uptown Lunch",
-        "rating": 4,
+        "rating": 4.5,
         "price": "Rp 35,000",
         "image": require("../assets/images/image1.jpg")
     },
@@ -13,7 +15,7 @@ export default [
         "title": "Roasted Chicken with Scrambled Egg",
         "cook_by": "Kulina",
         "category": "Uptown Lunch",
-        "rating": 4,
+        "rating": 4.5,
         "price": "Rp 35,000",
         "image": require("../assets/images/image2.jpg")
     },
@@ -22,7 +24,7 @@ export default [
         "title": "Roasted Chicken with Scrambled Egg",
         "cook_by": "Kulina",
         "category": "Uptown Lunch",
-        "rating": 4,
+        "rating": 4.5,
         "price": "Rp 35,000",
         "image": require("../assets/images/image3.jpg")
     },
@@ -31,7 +33,7 @@ export default [
         "title": "Roasted Chicken with Scrambled Egg",
         "cook_by": "Kulina",
         "category": "Uptown Lunch",
-        "rating": 4,
+        "rating": 4.5,
         "price": "Rp 35,000",
         "image": require("../assets/images/image4.jpg")
     }
