@@ -6,4 +6,5 @@ padding: 8px 16px;
 border: none;
 border-radius: 4px;
 color: #fff;
+width: ${props => props.fullWidth && "100%"};
 `;
