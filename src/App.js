@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { Card, Image, Button, Container, StickyBottomContainer, Header, Modal } from './components';
+import { Card, Image, Button, Container, StickyBottomContainer, Header, Modal, Input, ListContainer, ListItem, TruncatText } from './components';
 import { ArrowBackIcon, KeyboardArrowDownIcon } from './components/icon';
 import menus from './data/menu';
+import locations from './data/location.json';
 
 function App() {
   const [showSticky, setShowSticky] = useState(false);
@@ -39,15 +40,17 @@ function App() {
 
       <Modal show={showModal} setShow={setShowModal}>
         <div>
-          Cek makanan yang tersedia di lokasi kamu!
-          <input type="text" onChange={e => setSearchedText(e.target.value)} />
+          <h4>Cek makanan yang tersedia di lokasi kamu!</h4>
+          <Input type="text" onChange={e => setSearchedText(e.target.value)} />
 
-          {searchedText.length > 3 &&
-            <ul>
-              <li>list 1</li>
-              <li>list 2</li>
-              <li>list 3</li>
-            </ul>
+          {searchedText.length >= 3 &&
+            <ListContainer>
+              {locations.map(location =>
+                <ListItem title={location.name}>
+                  <TruncatText>{location.address}</TruncatText>
+                </ListItem>
+              )}
+            </ListContainer>
           }
 
         </div>
@@ -55,6 +58,6 @@ function App() {
 
     </>
   );
-}
+};
 
 export default App;
