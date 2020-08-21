@@ -17,7 +17,7 @@ import {
   AddCartButton,
   Date
 } from './components';
-import { ArrowBackIcon, KeyboardArrowDownIcon } from './components/icon';
+import { ArrowBackIcon, KeyboardArrowDownIcon, StarIcon } from './components/icon';
 import menus from './data/menu';
 import locations from './data/location.json';
 import dates from './data/date.json';
@@ -53,7 +53,16 @@ function App() {
         {menus.map(menu => <Card>
           <Image src={menu.image} />
           <Container>
-            <div>rating</div>
+            <div style={{ display: "flex" }}>
+              <div style={{ display: "flex", alignItems: "center" }}>{menu.rating}</div>
+              <div style={{ display: "flex" }}>
+                <StarIcon />
+                <StarIcon />
+                <StarIcon />
+                <StarIcon />
+                <StarIcon />
+              </div>
+            </div>
             <h2>{menu.title}</h2>
             <div>{menu.cook_by} &middot; {menu.category}</div>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>

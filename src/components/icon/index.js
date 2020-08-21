@@ -4,3 +4,4 @@ export * from './close';
 export * from './place';
 export * from './shop-cart';
 export * from './arrow-cart';
+export * from './star';
