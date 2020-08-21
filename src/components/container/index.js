@@ -5,6 +5,7 @@ ${props => props.main
         ? css`
     display: flex; 
     flex-direction: column;
+    margin: 8px;
     
     > div {
         margin-bottom: 16px;
