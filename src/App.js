@@ -1,8 +1,26 @@
 import React, { useState } from 'react';
-import { Card, Image, Button, Container, StickyBottomContainer, Header, Modal, Input, ListContainer, ListItem, TruncatText, ButtonGroup, ButtonGroupItem } from './components';
+import {
+  Card,
+  Image,
+  Button,
+  Container,
+  StickyBottomContainer,
+  Header,
+  Modal,
+  Input,
+  ListContainer,
+  ListItem,
+  TruncatText,
+  ButtonGroup,
+  ButtonGroupItem,
+  DateWrapper,
+  AddCartButton,
+  Date
+} from './components';
 import { ArrowBackIcon, KeyboardArrowDownIcon } from './components/icon';
 import menus from './data/menu';
 import locations from './data/location.json';
+import dates from './data/date.json';
 
 function App() {
   const [showSticky, setShowSticky] = useState(false);
@@ -11,14 +29,23 @@ function App() {
 
   return (
     <>
-      <Container main>
-        <Header>
+      <Header>
+        <div style={{ display: 'flex', alignItems: 'center' }}>
           <ArrowBackIcon />
-          <div>
+          <div style={{ marginLeft: '12px' }}>
             <div>Alamat Pengantaran</div>
             <div onClick={() => setShowModal(true)} style={{ display: "flex", alignItems: "center" }}>Tokopedia Tower <KeyboardArrowDownIcon /></div>
           </div>
-        </Header>
+        </div>
+        <DateWrapper>
+          {dates.map(date => <Date tabIndex={date.active ? 0 : -1} disabled={!date.active}>
+            <span>{date.day}</span>
+            <span>{date.date}</span>
+          </Date>)}
+        </DateWrapper>
+      </Header>
+
+      <Container main>
         <ButtonGroup>
           <ButtonGroupItem fullWidth>Lunch</ButtonGroupItem>
           <ButtonGroupItem fullWidth>Dinner</ButtonGroupItem>
@@ -31,7 +58,7 @@ function App() {
             <div>{menu.cook_by} &middot; {menu.category}</div>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
               {menu.price}
-              <Button onClick={() => setShowSticky(true)}>Add</Button>
+              <Button onClick={() => setShowSticky(true)}>ADD +</Button>
             </div>
           </Container>
         </Card>)
@@ -39,7 +66,7 @@ function App() {
       </Container>
 
       <StickyBottomContainer show={showSticky}>
-        <Button fullWidth>Sticky Button</Button>
+        <AddCartButton />
       </StickyBottomContainer>
 
       <Modal show={showModal} setShow={setShowModal}>
@@ -56,7 +83,6 @@ function App() {
               )}
             </ListContainer>
           }
-
         </div>
       </Modal>
     </>

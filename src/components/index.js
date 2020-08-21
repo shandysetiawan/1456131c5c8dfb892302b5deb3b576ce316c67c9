@@ -10,3 +10,5 @@ export * from './input';
 export * from './list';
 export * from './truncat-text';
 export * from './button-group';
+export * from './date';
+export * from './add-cart';
