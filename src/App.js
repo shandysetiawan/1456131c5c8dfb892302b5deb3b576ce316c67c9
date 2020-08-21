@@ -3,8 +3,7 @@ import { ThemeProvider } from 'styled-components';
 
 function App() {
   return (
-    <ThemeProvider>
-      Test
+    <ThemeProvider theme={{}}>
     </ThemeProvider>
   );
 }
