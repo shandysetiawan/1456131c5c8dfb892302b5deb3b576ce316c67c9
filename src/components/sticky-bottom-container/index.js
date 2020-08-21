@@ -5,6 +5,6 @@ export const StickyBottomContainer = styled.div`
     position: sticky;
     bottom: 0;
     height: 50px;
-    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0),
-    #ffffff);
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0),#ffffff);
+    z-index: 9;
 `;
