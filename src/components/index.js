@@ -9,3 +9,4 @@ export * from './modal';
 export * from './input';
 export * from './list';
 export * from './truncat-text';
+export * from './button-group';

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Card, Image, Button, Container, StickyBottomContainer, Header, Modal, Input, ListContainer, ListItem, TruncatText } from './components';
+import { Card, Image, Button, Container, StickyBottomContainer, Header, Modal, Input, ListContainer, ListItem, TruncatText, ButtonGroup, ButtonGroupItem } from './components';
 import { ArrowBackIcon, KeyboardArrowDownIcon } from './components/icon';
 import menus from './data/menu';
 import locations from './data/location.json';
@@ -19,6 +19,10 @@ function App() {
             <div onClick={() => setShowModal(true)} style={{ display: "flex", alignItems: "center" }}>Tokopedia Tower <KeyboardArrowDownIcon /></div>
           </div>
         </Header>
+        <ButtonGroup>
+          <ButtonGroupItem fullWidth>Lunch</ButtonGroupItem>
+          <ButtonGroupItem fullWidth>Dinner</ButtonGroupItem>
+        </ButtonGroup>
         {menus.map(menu => <Card>
           <Image src={menu.image} />
           <Container>
@@ -55,9 +59,8 @@ function App() {
 
         </div>
       </Modal>
-
     </>
   );
 };
 
-export default App;
+export default App;;
