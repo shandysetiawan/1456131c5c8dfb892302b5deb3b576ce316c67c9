@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { ThemeProvider } from 'styled-components';
-import { Card, Image, Button, Container, StickyBottomContainer } from './components';
+import { Card, Image, Button, Container, StickyBottomContainer, Header } from './components';
+import { ArrowBack, KeyboardArrowDown } from './components/icon';
 import menus from './data/menu';
 
 function App() {
@@ -9,6 +10,13 @@ function App() {
   return (
     <ThemeProvider theme={{}}>
       <Container main>
+        <Header>
+          <ArrowBack />
+          <div>
+            <div>Alamat Pengantaran</div>
+            <div style={{ display: "flex", alignItems: "center" }}>Tokopedia Tower <KeyboardArrowDown /></div>
+          </div>
+        </Header>
         {menus.map(menu => <Card>
           <Image src={menu.image} />
           <Container>
