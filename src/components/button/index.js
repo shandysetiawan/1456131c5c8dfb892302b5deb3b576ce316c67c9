@@ -7,4 +7,8 @@ border: none;
 border-radius: 4px;
 color: #fff;
 width: ${props => props.fullWidth && "100%"};
+
+@media only screen and (max-width: 600px) {
+      background-color: green;
+  }
 `;

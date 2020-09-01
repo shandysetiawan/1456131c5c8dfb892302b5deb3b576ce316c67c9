@@ -1,8 +1,10 @@
 html,
 body {
-	margin: 0;
-	height: 100%;
-	font-family: "proxima-nova", sans-serif;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%;
+  font-family: "proxima-nova", sans-serif;
+  max-width: 370px;
 }
 
 h1,
@@ -10,5 +12,5 @@ h2,
 h3,
 h4,
 p {
-	margin: 0;
+  margin: 0;
 }
